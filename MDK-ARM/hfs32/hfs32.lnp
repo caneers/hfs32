@@ -1,0 +1,28 @@
+--cpu Cortex-M0
+"hfs32\startup_stm32f030x6.o"
+"hfs32\main.o"
+"hfs32\stm32f0xx_it.o"
+"hfs32\stm32f0xx_hal_msp.o"
+"hfs32\stm32f0xx_hal_rtc.o"
+"hfs32\stm32f0xx_hal_rtc_ex.o"
+"hfs32\stm32f0xx_hal_tim.o"
+"hfs32\stm32f0xx_hal_tim_ex.o"
+"hfs32\stm32f0xx_hal_uart.o"
+"hfs32\stm32f0xx_hal_uart_ex.o"
+"hfs32\stm32f0xx_hal_rcc.o"
+"hfs32\stm32f0xx_hal_rcc_ex.o"
+"hfs32\stm32f0xx_hal.o"
+"hfs32\stm32f0xx_hal_i2c.o"
+"hfs32\stm32f0xx_hal_i2c_ex.o"
+"hfs32\stm32f0xx_hal_gpio.o"
+"hfs32\stm32f0xx_hal_dma.o"
+"hfs32\stm32f0xx_hal_cortex.o"
+"hfs32\stm32f0xx_hal_pwr.o"
+"hfs32\stm32f0xx_hal_pwr_ex.o"
+"hfs32\stm32f0xx_hal_flash.o"
+"hfs32\stm32f0xx_hal_flash_ex.o"
+"hfs32\system_stm32f0xx.o"
+--library_type=microlib --strict --scatter "hfs32\hfs32.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "hfs32.map" -o hfs32\hfs32.axf
