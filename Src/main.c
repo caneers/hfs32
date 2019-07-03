@@ -146,11 +146,11 @@ int main(void)
     /* USER CODE BEGIN 3 */
 		    
   			if(recv_end_flag==1) //接收完成标志 ==1
-				{
-						
+				{ 
 //						memset(rx_buffer,0,sizeof(rx_buffer));
-						HAL_UART_Transmit_DMA(&huart1,rx_buffer,rx_len);
-					  HAL_UART_Receive_DMA(&huart1,rx_buffer,BUFFER_SIZE);//重新打开DMA接收
+					  HAL_UART_Transmit_DMA(&huart1,rx_buffer,rx_len);//从DMA的串口1 发送数据rx_buffer，长度rx_len，到串口
+					 
+					  HAL_UART_Receive_DMA(&huart1,rx_buffer,BUFFER_SIZE);//发送完毕后，重新打开DMA接收
 					  rx_len = 0;//清除计数
 					  recv_end_flag = 0;//清除接收结束标志位
         }
