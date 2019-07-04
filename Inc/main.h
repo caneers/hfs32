@@ -32,7 +32,7 @@ extern "C" {
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "stdio.h"
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/
@@ -43,6 +43,13 @@ extern volatile uint8_t rx_len;           //接收一帧数据的长度
 extern volatile uint8_t recv_end_flag;    //一帧数据接收完成标志
 extern uint8_t rx_buffer[50];            //接收数据缓存
 
+
+#define ADC_CHANNEL_CNT     10
+
+
+ 
+extern uint32_t AD_Buf[ADC_CHANNEL_CNT];
+extern uint32_t DMA_CNT;
 
 
 /* USER CODE END ET */
@@ -67,7 +74,20 @@ void Error_Handler(void);
 /* Private defines -----------------------------------------------------------*/
 #define LED2_Pin GPIO_PIN_2
 #define LED2_GPIO_Port GPIOA
+#define BOOST_PWM_Pin GPIO_PIN_3
+#define BOOST_PWM_GPIO_Port GPIOA
+#define COUNTIN_Pin GPIO_PIN_4
+#define COUNTIN_GPIO_Port GPIOA
+#define SET_3V_Pin GPIO_PIN_5
+#define SET_3V_GPIO_Port GPIOA
+#define OUT_LED_Pin GPIO_PIN_7
+#define OUT_LED_GPIO_Port GPIOA
+#define COM_REF_Pin GPIO_PIN_1
+#define COM_REF_GPIO_Port GPIOB
 /* USER CODE BEGIN Private defines */
+ 
+
+
 
 /* USER CODE END Private defines */
 

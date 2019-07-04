@@ -3,6 +3,8 @@
 "hfs32\main.o"
 "hfs32\stm32f0xx_it.o"
 "hfs32\stm32f0xx_hal_msp.o"
+"hfs32\stm32f0xx_hal_adc.o"
+"hfs32\stm32f0xx_hal_adc_ex.o"
 "hfs32\stm32f0xx_hal_rtc.o"
 "hfs32\stm32f0xx_hal_rtc_ex.o"
 "hfs32\stm32f0xx_hal_tim.o"
